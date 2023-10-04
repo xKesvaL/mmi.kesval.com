@@ -1,6 +1,5 @@
 import type { Preview } from '@storybook/svelte';
 import { themes } from '@storybook/theming';
-import Wrapper from './Wrapper.svelte';
 
 import '@kesval/design';
 import '../src/lib/styles/main.scss';
@@ -16,8 +15,7 @@ const preview: Preview = {
 		},
 		layout: 'centered',
 		docs: themes.dark
-	},
-	decorators: [() => Wrapper]
+	}
 };
 
 export default preview;

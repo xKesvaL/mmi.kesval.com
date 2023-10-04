@@ -1,7 +1,5 @@
 import type { Brand, Route } from './typings/standard';
 
-export const DEFAULT_LOCALE: Locale = 'en';
-
 export const BRAND = {
 	author: {
 		name: 'KesvaL',
@@ -11,8 +9,8 @@ export const BRAND = {
 		dark: '/images/logos/logo.png',
 		light: '/images/logos/logo.png'
 	},
-	name: 'Starter',
-	url: 'https://starter.kesval.com'
+	name: 'MMI',
+	url: 'https://mmi.kesval.com'
 } as const satisfies Brand;
 
 export const ROUTES = {
@@ -20,7 +18,3 @@ export const ROUTES = {
 		path: '/'
 	}
 } as const satisfies Record<string, Route>;
-
-export const LOCALES = ['en', 'fr'] as const;
-
-export type Locale = (typeof LOCALES)[number];

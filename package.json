@@ -1,5 +1,5 @@
 {
-	"name": "starter-svelte",
+	"name": "mmi.kesval.com",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
@@ -28,6 +28,7 @@
 		"@storybook/addon-storysource": "^7.4.5",
 		"@storybook/addon-svelte-csf": "^4.0.9",
 		"@storybook/blocks": "^7.4.5",
+		"@storybook/manager-api": "^7.4.6",
 		"@storybook/svelte": "^7.4.5",
 		"@storybook/sveltekit": "^7.4.5",
 		"@storybook/testing-library": "^0.2.2",
@@ -56,6 +57,7 @@
 		"postcss-load-config": "^4.0.1",
 		"prettier": "^3.0.3",
 		"prettier-plugin-svelte": "^3.0.3",
+		"prettier-plugin-tailwindcss": "^0.5.5",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"sass": "^1.68.0",

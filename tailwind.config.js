@@ -1,14 +1,13 @@
+import { fontFamily } from 'tailwindcss/defaultTheme';
+
 /** @type {import('tailwindcss').Config} */
 const config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
-	darkMode: ['class'],
 	theme: {
 		container: {
 			center: true,
 			padding: '2rem',
-			screens: {
-				'2xl': '1400px'
-			}
+			screens: {}
 		},
 		extend: {
 			borderRadius: {
@@ -59,6 +58,10 @@ const config = {
 					foreground: 'hsl(var(--success-foreground))'
 				}
 			}
+		},
+		fontFamily: {
+			sans: ['Inter', ...fontFamily.sans],
+			title: ['Poppins', ...fontFamily.sans]
 		}
 	}
 };

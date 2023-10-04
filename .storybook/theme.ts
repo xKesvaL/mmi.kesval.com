@@ -6,8 +6,5 @@ export default create({
 
 	brandTitle: BRAND.name,
 	brandUrl: BRAND.url,
-	brandImage: BRAND.logo.dark,
-
-	colorPrimary: BRAND.color.primary,
-	colorSecondary: BRAND.color.secondary
+	brandImage: BRAND.logo.dark
 });

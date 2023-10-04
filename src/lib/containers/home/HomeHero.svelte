@@ -33,7 +33,7 @@
 			rgba(var(--color-base-100-rgb), 0) 60%
 		);
 
-		min-height: 90vh;
+		min-height: 190vh;
 
 		.box > div {
 			@apply w-32 h-32 rounded-full justify-center items-center flex;
