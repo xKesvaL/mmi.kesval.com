@@ -3,7 +3,7 @@
 </script>
 
 <section class="-mt-28 h-full">
-	<article class="container flex min-h-screen max-w-[80ch] flex-col gap-8 pt-28">
+	<article class="container flex min-h-screen max-w-[80ch] flex-col gap-8 pt-32">
 		<div class="flex flex-col gap-4">
 			<h1 class="scroll-m-20 font-title text-4xl font-black tracking-tight lg:text-5xl">
 				Par où commencer ?
