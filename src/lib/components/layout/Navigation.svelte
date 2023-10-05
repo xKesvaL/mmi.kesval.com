@@ -13,7 +13,7 @@
 	>
 		<Image src="/images/logo/logo.png" alt="Logo MMI" />
 	</a>
-	<nav>...</nav>
+	<nav></nav>
 	<div>
 		<ThemeSwitcher />
 	</div>

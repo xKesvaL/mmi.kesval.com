@@ -1,6 +1,7 @@
 <script>
 	import Image from '$lib/components/base/Image.svelte';
 	import { Button } from '$lib/components/ui/button';
+	import { BRAND } from '$lib/config';
 </script>
 
 <div class="flex flex-col gap-4">
@@ -21,7 +22,7 @@
 				href="https://code.visualstudio.com/"
 				target="_blank"
 				variant="link"
-				class="h-auto p-0 text-base text-secondary"><code>Visual Studio Code</code></Button
+				class="h-auto p-0 text-base text-accent"><code>Visual Studio Code</code></Button
 			>
 		</li>
 		<li>
@@ -29,7 +30,7 @@
 				href="https://figma.com/"
 				variant="link"
 				target="_blank"
-				class="h-auto p-0 text-base text-secondary"><code>Figma</code></Button
+				class="h-auto p-0 text-base text-accent"><code>Figma</code></Button
 			>
 		</li>
 		<li>
@@ -37,7 +38,7 @@
 				href="https://vercel.com/"
 				variant="link"
 				target="_blank"
-				class="h-auto p-0 text-base text-secondary"><code>Github</code></Button
+				class="h-auto p-0 text-base text-accent"><code>Github</code></Button
 			> (Bonus)
 		</li>
 		<li>
@@ -45,7 +46,7 @@
 				href="https://www.figma.com/"
 				variant="link"
 				target="_blank"
-				class="h-auto p-0 text-base text-secondary"><code>Vercel</code></Button
+				class="h-auto p-0 text-base text-accent"><code>Vercel</code></Button
 			> (Bonus)
 		</li>
 	</ul>
@@ -69,7 +70,7 @@
 			href="https://figma.com/"
 			variant="link"
 			target="_blank"
-			class="h-auto p-0 text-base text-secondary"><code>Figma</code></Button
+			class="h-auto p-0 text-base text-accent"><code>Figma</code></Button
 		> qui est un outil de design.
 	</p>
 	<h3 class="scroll-m-20 text-2xl font-semibold tracking-tight">Figma</h3>
@@ -78,7 +79,7 @@
 			href="https://figma.com/"
 			variant="link"
 			target="_blank"
-			class="h-auto p-0 text-base text-secondary"><code>Figma</code></Button
+			class="h-auto p-0 text-base text-accent"><code>Figma</code></Button
 		> et te créer un compte gratuit. Une fois que c'est fait, tu peux créer un nouveau fichier en cliquant
 		sur le bouton <code>+ Design File</code> qui ressemble à ça :
 	</p>
@@ -142,17 +143,41 @@
 	<p>
 		On peut voir que c'est vraiment très simple, mais c'est tout ce qu'on a besoin pour l'instant.
 		Jusqu'ici, on a réfléchi comme un designer, pas comme un développeur. Comment est-ce que je
-		ferais pour coder tous ces carrés ? Souvent, on va utiliser des <code>div</code>s si aucun autre
-		élément ne correspond. Comment est-ce que je mets les carrés à côté des autres ? Oui,
+		ferais pour coder tous ces carrés ? Souvent, on va utiliser des <code>&lt;div&gt;</code>s si
+		aucun autre élément ne correspond. Comment est-ce que je mets les carrés à côté des autres ?
+		Oui,
 		<code>display: flex;</code>.
 	</p>
 	<p>
 		Mais comment je mets flex sur les cinqs éléments au milieu de la barre de navigation ? Bonne
-		question! On peut rajouter une <code>div</code> autour pour les englober dans un nouveau carré, et
-		mettre ce carré là en flex :), comme ça :
+		question! On peut rajouter une <code>&lt;div&gt;</code> autour pour les englober dans un nouveau
+		carré, et mettre ce carré là en flex, comme ça :
 	</p>
 	<Image
 		src="/images/blog/dev/par-ou-commencer/figma-wireframe-2.png"
 		alt="Un wireframe simple sur Figma du site MMI UHA, Étape 2"
 	/>
+	<h3 class="scroll-m-20 text-2xl font-semibold tracking-tight">Code - HTML</h3>
+	<p>
+		C'est l'heure de coder ! Maintenant c'est simple, chaque carré, c'est une <code
+			>&lt;div&gt;</code
+		>. Parfois, on a des éléments qui ont plus de sens, comme pour le titre, on utilisera un
+		<code>&lt;h1&gt;</code>
+		pas une <code>&lt;div&gt;</code>, pour les liens, des <code>&lt;a&gt;</code>.
+	</p>
+	<p>
+		Si on reproduit le wireframe, en respectant la hiérarchie des éléments (le fait que certains
+		blocs soit dans d'autres blocs), et qu'on ajoute une petite règle CSS pour voir les bordures,
+		<code>{`\`* { outline: 1px red; }\``}</code> (met le dans le css), on obtient ça :
+	</p>
+	<iframe
+		src="/images/blog/dev/par-ou-commencer/dev-site-1.html"
+		frameborder="0"
+		title="Reproduction du site MMI UHA, Étape 1"
+		class="aspect-video"
+	></iframe>
+	<Button href="/images/blog/dev/par-ou-commencer/dev-site-1.txt" target="_blank">
+		Voir le code
+	</Button>
+	<p>Comme on peut le voir sans style tout est l'un au dessus de l'autre.</p>
 </div>
