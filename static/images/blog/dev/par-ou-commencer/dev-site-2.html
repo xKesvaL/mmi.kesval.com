@@ -3,15 +3,26 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Dev Site, Etape 1</title>
+		<title>Dev Site, Etape 2</title>
 		<style>
 			* {
 				outline: 1px solid red;
 			}
+
+			.nav {
+				/* Mets les éléments en ligne */
+				display: flex;
+			}
+
+			/* Uniquement les div qui sont directement dans .nav */
+			.nav > div {
+				/* Mets les éléments en ligne */
+				display: flex;
+			}
 		</style>
 	</head>
 	<body>
-		<div>
+		<div class="nav">
 			<div>logo</div>
 			<div>
 				<div>menu 1</div>

@@ -1,7 +1,6 @@
 <script>
 	import Image from '$lib/components/base/Image.svelte';
 	import { Button } from '$lib/components/ui/button';
-	import { BRAND } from '$lib/config';
 </script>
 
 <div class="flex flex-col gap-4">
@@ -176,8 +175,237 @@
 		title="Reproduction du site MMI UHA, Étape 1"
 		class="aspect-video"
 	></iframe>
-	<Button href="/images/blog/dev/par-ou-commencer/dev-site-1.txt" target="_blank">
-		Voir le code
-	</Button>
-	<p>Comme on peut le voir sans style tout est l'un au dessus de l'autre.</p>
+	<div class="flex gap-4">
+		<Button
+			href="/images/blog/dev/par-ou-commencer/dev-site-1.txt"
+			class="flex-grow"
+			target="_blank"
+		>
+			Voir le code
+		</Button>
+		<Button
+			href="/images/blog/dev/par-ou-commencer/dev-site-1.html"
+			class="flex-grow"
+			target="_blank"
+			variant="secondary"
+		>
+			Voir le site actuel
+		</Button>
+	</div>
+	<p>
+		Attention, à partir d'ici sur téléphone le site qu'on fait piquera les yeux, je conseille donc
+		de lire ce post sur ordinateur.
+	</p>
+	<p>
+		Comme on peut le voir sans style tout est l'un au dessus de l'autre. On va ajouter un peu de
+		flex par ci par là pour que ça ressemble à notre wireframe. On va l'ajouter sur la barre de
+		navigation, et sur les éléments de la barre de navigation. Voilà le résultat :
+	</p>
+	<iframe
+		src="/images/blog/dev/par-ou-commencer/dev-site-2.html"
+		frameborder="0"
+		title="Reproduction du site MMI UHA, Étape 2"
+		class="aspect-video"
+	></iframe>
+	<div class="flex gap-4">
+		<Button
+			href="/images/blog/dev/par-ou-commencer/dev-site-2.txt"
+			class="flex-grow"
+			target="_blank"
+		>
+			Voir le code
+		</Button>
+		<Button
+			href="/images/blog/dev/par-ou-commencer/dev-site-2.html"
+			class="flex-grow"
+			target="_blank"
+			variant="secondary"
+		>
+			Voir le site actuel
+		</Button>
+	</div>
+	<p>
+		C'est toujours pas très beau parce que nos éléments sont collés et pas positionnés au bon
+		endroit. Pour régler ça on peut ajouter du padding dans la navbar pour que les éléments ne
+		soient pas collés au bord, et puis on peut utiliser du <code>gap</code> pour espacer les éléments
+		entre eux. On obtient ça:
+	</p>
+	<iframe
+		src="/images/blog/dev/par-ou-commencer/dev-site-3.html"
+		frameborder="0"
+		title="Reproduction du site MMI UHA, Étape 3"
+		class="aspect-video"
+	></iframe>
+	<div class="flex gap-4">
+		<Button
+			href="/images/blog/dev/par-ou-commencer/dev-site-3.txt"
+			class="flex-grow"
+			target="_blank"
+		>
+			Voir le code
+		</Button>
+		<Button
+			href="/images/blog/dev/par-ou-commencer/dev-site-3.html"
+			class="flex-grow"
+			target="_blank"
+			variant="secondary"
+		>
+			Voir le site actuel
+		</Button>
+	</div>
+	<p>
+		Là on va parler de propriétés flex, si tu as du mal avec ça, je te conseille de faire un tour
+		sur
+		<Button
+			href="https://flexboxfroggy.com/"
+			target="_blank"
+			class="h-auto p-0 text-base text-accent"
+			variant="link"
+		>
+			Flexbox Froggy
+		</Button> et d'y faire quelques niveaux pour bien comprendre les propriétés flex.
+	</p>
+	<p>
+		Ok c'est vraiment mieux, mais c'est toujours pas bien positionné. On veut que le logo soit a
+		gauche, le menu au milieu et les icones a droite. Pour ça, on va utiliser <code
+			>justify-content</code
+		>
+		sur la navbar. On va mettre <code>space-between</code> pour que les éléments soient espacés le plus
+		possible. On obtient ça :
+	</p>
+	<iframe
+		src="/images/blog/dev/par-ou-commencer/dev-site-4.html"
+		frameborder="0"
+		title="Reproduction du site MMI UHA, Étape 4"
+		class="aspect-video"
+	></iframe>
+	<div class="flex gap-4">
+		<Button
+			href="/images/blog/dev/par-ou-commencer/dev-site-4.txt"
+			class="flex-grow"
+			target="_blank"
+		>
+			Voir le code
+		</Button>
+		<Button
+			href="/images/blog/dev/par-ou-commencer/dev-site-4.html"
+			class="flex-grow"
+			target="_blank"
+			variant="secondary"
+		>
+			Voir le site actuel
+		</Button>
+	</div>
+	<p>
+		On a fait qu'un seul changement, mais ça fait toute la différence. Il reste quelques petits
+		problèmes :
+	</p>
+	<ul class="list-inside list-disc">
+		<li>Il y a un espace tout autour de la page</li>
+		<li>Le texte n'est pas centré</li>
+		<li>Il nous manque l'image de fond</li>
+	</ul>
+	<p>La résolution de ces problèmes dans l'ordre :</p>
+	<ul class="list-inside list-disc">
+		<li>
+			Il faut mettre un <code>margin: 0;</code> sur le body (il y a <code>8px</code> de margin sur le
+			body de base)
+		</li>
+		<li>
+			On peut utiliser un <code>flex</code> sur le texte et mettre
+			<code>justify-content: center;</code>
+			et <code>align-items: center;</code> pour centrer le texte. Le bouton ne sera pas centré parce
+			qu'il ne prend pas toute la largeur, mais on peut le centrer avec
+			<code>margin-left/right: auto;</code>
+		</li>
+		<li>
+			On peut utiliser une image de fond avec <code>background-image: url(...);</code> et
+			<code>background-size: cover;</code> pour que l'image prenne toute la place, sur la div qui
+			contient tout (navbar + texte)!
+			<br />
+			<br />
+			PS: On regroupe la navbar et le texte dans une div pour pouvoir mettre l'image de fond sur cette
+			div. Ça évite que si on rajoute encore du contenu, l'image de fond reste sur la navbar et le texte
+			de bienvenue et ne s'étire pas. On ajoutera aussi <code>min-height: 100vh;</code> sur la div pour
+			qu'elle prenne au minimum toute la hauteur de l'écran.
+		</li>
+	</ul>
+	<p>
+		J'ai aussi changé certains éléments pour les rendre plus logiques, par exemple de <code
+			>div</code
+		>
+		à <code>header</code> et on obtient alors ça :
+	</p>
+	<iframe
+		src="/images/blog/dev/par-ou-commencer/dev-site-5.html"
+		frameborder="0"
+		title="Reproduction du site MMI UHA, Étape 5"
+		class="aspect-video"
+	></iframe>
+	<div class="flex flex-wrap gap-4">
+		<Button
+			href="/images/blog/dev/par-ou-commencer/dev-site-5.txt"
+			class=" flex-grow"
+			target="_blank"
+		>
+			Voir le code
+		</Button>
+		<Button
+			href="/images/blog/dev/par-ou-commencer/dev-site-5.html"
+			class=" flex-grow"
+			target="_blank"
+			variant="secondary"
+		>
+			Voir le site actuel
+		</Button>
+		<Button
+			href="/images/blog/dev/par-ou-commencer/dev-site-5.png"
+			class=" flex-grow"
+			target="_blank"
+			variant="default"
+			download="image-fond.png">Télécharger l'image</Button
+		>
+	</div>
+	<p>
+		Ca y est, la majorité du travail est fait ! Il ne reste plus qu'à ajouter un peu de style en
+		utilisant des couleurs, des tailles de police, du padding et on obtient ça :
+	</p>
+	<iframe
+		src="/images/blog/dev/par-ou-commencer/dev-site-6.html"
+		frameborder="0"
+		title="Reproduction du site MMI UHA, Étape 6"
+		class="aspect-video"
+	></iframe>
+	<div class="flex gap-4">
+		<Button
+			href="/images/blog/dev/par-ou-commencer/dev-site-6.txt"
+			class=" flex-grow"
+			target="_blank"
+		>
+			Voir le code
+		</Button>
+		<Button
+			href="/images/blog/dev/par-ou-commencer/dev-site-6.html"
+			class=" flex-grow"
+			target="_blank"
+			variant="secondary"
+		>
+			Voir le site actuel
+		</Button>
+	</div>
+	<p>
+		Et voilà tout ! On a fait un site web en partant de rien, en réfléchissant à l'avance à ce qu'on
+		voulait faire, et en utilisant des outils simples. On a utilisé du HTML et du CSS, et on a
+		utilisé Figma pour faire un wireframe.
+	</p>
+	<p>
+		Si tu as encore des questions, n'hésite pas à me contacter sur <Button
+			href="https://instagram.com/xkesval"
+			target="_blank"
+			class="h-auto p-0 text-base text-accent"
+			variant="link"
+		>
+			Instagram</Button
+		> !
+	</p>
 </div>

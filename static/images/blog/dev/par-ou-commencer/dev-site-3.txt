@@ -3,15 +3,32 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Dev Site, Etape 1</title>
+		<title>Dev Site, Etape 3</title>
 		<style>
 			* {
 				outline: 1px solid red;
 			}
+
+			.nav {
+				/* Mets les éléments en ligne */
+				display: flex;
+				/* Ajoute un espace de 8px entre le contenu et la bordure */
+				padding: 8px;
+				/* Ajoute un espace de 16px entre chaque élément dans .nav */
+				gap: 16px;
+			}
+
+			/* Uniquement les div qui sont directement dans .nav */
+			.nav > div {
+				/* Mets les éléments en ligne */
+				display: flex;
+				/* Ajoute un espace de 8px entre chaque élément dans les div dans .nav */
+				gap: 8px;
+			}
 		</style>
 	</head>
 	<body>
-		<div>
+		<div class="nav">
 			<div>logo</div>
 			<div>
 				<div>menu 1</div>

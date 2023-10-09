@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dev Site, Etape 5</title>
+		<style>
+			* {
+				outline: 1px solid red;
+			}
+
+			body {
+				/* Enleve la marge par défaut sur le body */
+				margin: 0;
+			}
+
+			.image {
+				/* Image de fond */
+				background: url('./image-fond.png');
+				/* Taille minimum pour qu'elle prenne au moins tout l'ecran */
+				min-height: 100vh;
+				/* Permet de prendre toute la taille sans laisser de vide */
+				background-size: cover;
+				/* Centre l'image quand elle est rognée */
+				background-position: center;
+			}
+
+			.nav {
+				/* Mets les éléments en ligne */
+				display: flex;
+				/* Ajoute un espace de 8px entre le contenu et la bordure */
+				padding: 8px;
+				/* Ajoute un espace de 16px entre chaque élément dans .nav */
+				gap: 16px;
+				/* Espace les éléments le + possible */
+				justify-content: space-between;
+			}
+
+			/* Uniquement les div qui sont directement dans .nav */
+			.nav > div {
+				/* Mets les éléments en ligne */
+				display: flex;
+				/* Ajoute un espace de 8px entre chaque élément dans les div dans .nav */
+				gap: 8px;
+			}
+
+			/* Tout les éléments dans main */
+			main > * {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="image">
+			<header class="nav">
+				<div>logo</div>
+				<nav>
+					<a href="/">menu 1</a>
+					<a href="/">menu 2</a>
+					<a href="/">menu 3</a>
+					<a href="/">menu 4</a>
+					<a href="/">menu 5</a>
+				</nav>
+				<div>
+					<div>ico 1</div>
+					<div>ico 2</div>
+				</div>
+			</header>
+			<main>
+				<h1>Titre</h1>
+				<p>Sous-titre</p>
+				<button>Bouton</button>
+			</main>
+		</div>
+	</body>
+</html>

@@ -21,10 +21,8 @@
 				<div>menu 5</div>
 			</div>
 			<div>
-				<div>icone 1</div>
-				<div>icone 2</div>
-				<div>icone 3</div>
-				<div>icone 4</div>
+				<div>ico 1</div>
+				<div>ico 2</div>
 			</div>
 		</div>
 		<div>

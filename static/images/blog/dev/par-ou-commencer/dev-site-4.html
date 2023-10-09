@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dev Site, Etape 4</title>
+		<style>
+			* {
+				outline: 1px solid red;
+			}
+
+			.nav {
+				/* Mets les éléments en ligne */
+				display: flex;
+				/* Ajoute un espace de 8px entre le contenu et la bordure */
+				padding: 8px;
+				/* Ajoute un espace de 16px entre chaque élément dans .nav */
+				gap: 16px;
+				/* Espace les éléments le + possible */
+				justify-content: space-between;
+			}
+
+			/* Uniquement les div qui sont directement dans .nav */
+			.nav > div {
+				/* Mets les éléments en ligne */
+				display: flex;
+				/* Ajoute un espace de 8px entre chaque élément dans les div dans .nav */
+				gap: 8px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="nav">
+			<div>logo</div>
+			<div>
+				<div>menu 1</div>
+				<div>menu 2</div>
+				<div>menu 3</div>
+				<div>menu 4</div>
+				<div>menu 5</div>
+			</div>
+			<div>
+				<div>ico 1</div>
+				<div>ico 2</div>
+			</div>
+		</div>
+		<div>
+			<h1>Titre</h1>
+			<p>Sous-titre</p>
+			<button>Bouton</button>
+		</div>
+	</body>
+</html>

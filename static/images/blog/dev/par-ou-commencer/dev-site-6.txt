@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dev Site, Etape 6</title>
+		<style>
+			body {
+				/* Enleve la marge par défaut sur le body */
+				margin: 0;
+				font-family:
+					system-ui,
+					-apple-system,
+					BlinkMacSystemFont,
+					sans-serif;
+			}
+
+			.image {
+				/* Image de fond */
+				background: url('./image-fond.png');
+				/* Taille minimum pour qu'elle prenne au moins tout l'ecran */
+				min-height: 100vh;
+				/* Permet de prendre toute la taille sans laisser de vide */
+				background-size: cover;
+				/* Centre l'image quand elle est rognée */
+				background-position: center;
+			}
+
+			.nav {
+				/* Mets les éléments en ligne */
+				display: flex;
+				/* Ajoute un espace de 8px entre le contenu et la bordure */
+				padding: 8px;
+				/* Ajoute un espace de 16px entre chaque élément dans .nav */
+				gap: 16px;
+				/* Espace les éléments le + possible */
+				justify-content: space-between;
+			}
+
+			/* Uniquement les div qui sont directement dans .nav */
+			.nav > div {
+				/* Mets les éléments en ligne */
+				display: flex;
+				/* Ajoute un espace de 8px entre chaque élément dans les div dans .nav */
+				gap: 8px;
+			}
+
+			.nav a {
+				/* Changement de la couleur des liens */
+				color: black;
+				/* Mets tous les textes en majuscule (on pourrait le faire à l'écrit aussi) */
+				text-transform: uppercase;
+			}
+
+			/* Tout les éléments dans main */
+			main > * {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				margin-left: auto;
+				margin-right: auto;
+			}
+
+			main h1 {
+				font-size: 48px;
+				/* Version gras++ (black) de la police */
+				font-weight: 900;
+				/* On réduit la taille de la marge en dessous du titre */
+				margin-bottom: 8px;
+			}
+
+			main button {
+				/* 16px entre le contenu et la bordure */
+				padding: 16px;
+				/* Arrondi au maximum */
+				border-radius: 9999px;
+				/* Ne pas afficher la bordure */
+				border: none;
+				color: white;
+				background: black;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="image">
+			<header class="nav">
+				<div>logo</div>
+				<nav>
+					<a href="/">menu 1</a>
+					<a href="/">menu 2</a>
+					<a href="/">menu 3</a>
+					<a href="/">menu 4</a>
+					<a href="/">menu 5</a>
+				</nav>
+				<div>
+					<div>ico 1</div>
+					<div>ico 2</div>
+				</div>
+			</header>
+			<main>
+				<h1>MMI Mulhouse</h1>
+				<p>Sous-titre</p>
+				<button>Bouton</button>
+			</main>
+		</div>
+	</body>
+</html>
