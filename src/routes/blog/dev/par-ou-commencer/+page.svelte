@@ -32,7 +32,7 @@
 				class="h-auto p-0 text-base text-accent"><code>Figma</code></Button
 			>
 		</li>
-		<li>
+		<!-- <li>
 			<Button
 				href="https://vercel.com/"
 				variant="link"
@@ -47,7 +47,7 @@
 				target="_blank"
 				class="h-auto p-0 text-base text-accent"><code>Vercel</code></Button
 			> (Bonus)
-		</li>
+		</li> -->
 	</ul>
 </div>
 <div class="flex flex-col gap-4">
