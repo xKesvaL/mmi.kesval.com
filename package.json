@@ -71,7 +71,7 @@
 		"tailwindcss": "^3.3.2",
 		"tslib": "^2.6.2",
 		"typescript": "^5.2.2",
-		"vite": "^4.4.9",
+		"vite": "^4.4.12",
 		"zod": "^3.22.2"
 	},
 	"type": "module"
